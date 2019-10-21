@@ -29,18 +29,18 @@ using namespace chalk;
 int main() {
   ostyler.formats.push_back(fmt::Bold);
   ostyler.formats.push_back(fmt::Underline);
-  // std::cout << FormatWrap(fg::BrightGreen.Wrap("Hello world!"), fmt::Bold);
+  // std::cout << FormatWrap(fg::BrightGreen("Hello world!"), fmt::Bold);
 
-  std::string bold = fmt::Bold.Wrap("Bold");
+  std::string bold = fmt::Bold("Bold");
 
-  std::string underline = fmt::Underline.Wrap("Underline");
-  std::string italic = fmt::Italic.Wrap("Italic");
-  std::string conceal = fmt::Conceal.Wrap("Conceal");
-  std::string crossed_out = fmt::CrossedOut.Wrap("Crossed Out");
-  std::string faint = fmt::Faint.Wrap("Faint");
-  std::string rapid_blink = fmt::RapidBlink.Wrap("Rapid Blink");
-  std::string slow_blink = fmt::SlowBlink.Wrap("Slow Blink");
-  std::string reverse = fmt::Reverse.Wrap("Reverse");
+  std::string underline = fmt::Underline("Underline");
+  std::string italic = fmt::Italic("Italic");
+  std::string conceal = fmt::Conceal("Conceal");
+  std::string crossed_out = fmt::CrossedOut("Crossed Out");
+  std::string faint = fmt::Faint("Faint");
+  std::string rapid_blink = fmt::RapidBlink("Rapid Blink");
+  std::string slow_blink = fmt::SlowBlink("Slow Blink");
+  std::string reverse = fmt::Reverse("Reverse");
 
   ostyler << "\n\nFormatting Operations" << std::endl << std::endl;
   std::cout << bold << "   " << underline << "   " << italic << "   " << conceal
@@ -51,45 +51,45 @@ int main() {
           << "3/4 bit Colors"
           << "\n\n";
 
-  std::cout << bg::Red.Wrap("Red") << "    "
-            << fg::Black.Wrap(bg::BrightRed.Wrap("Bright Red")) << "    "
-            << fg::Red.Wrap("Red") << "    " << fg::BrightRed.Wrap("Bright Red")
+  std::cout << bg::Red("Red") << "    "
+            << fg::Black(bg::BrightRed("Bright Red")) << "    "
+            << fg::Red("Red") << "    " << fg::BrightRed("Bright Red")
             << "\n"
             << std::endl;
 
-  std::cout << bg::Green.Wrap("Green") << "    "
-            << fg::Black.Wrap(bg::BrightGreen.Wrap("Bright Green")) << "    "
-            << fg::Green.Wrap("Green") << "    "
-            << fg::BrightGreen.Wrap("Bright Green") << "\n"
+  std::cout << bg::Green("Green") << "    "
+            << fg::Black(bg::BrightGreen("Bright Green")) << "    "
+            << fg::Green("Green") << "    "
+            << fg::BrightGreen("Bright Green") << "\n"
             << std::endl;
 
-  std::cout << bg::Yellow.Wrap("Yellow") << "    "
-            << fg::Black.Wrap(bg::BrightYellow.Wrap("Bright Yellow")) << "    "
-            << fg::Yellow.Wrap("Yellow") << "    "
-            << fg::BrightYellow.Wrap("Bright Yellow") << "\n"
+  std::cout << bg::Yellow("Yellow") << "    "
+            << fg::Black(bg::BrightYellow("Bright Yellow")) << "    "
+            << fg::Yellow("Yellow") << "    "
+            << fg::BrightYellow("Bright Yellow") << "\n"
             << std::endl;
 
-  std::cout << bg::Blue.Wrap("Blue") << "    "
-            << fg::Black.Wrap(bg::BrightBlue.Wrap("Bright Blue")) << "    "
-            << fg::Blue.Wrap("Blue") << "    "
-            << fg::BrightBlue.Wrap("Bright Blue") << "\n"
+  std::cout << bg::Blue("Blue") << "    "
+            << fg::Black(bg::BrightBlue("Bright Blue")) << "    "
+            << fg::Blue("Blue") << "    "
+            << fg::BrightBlue("Bright Blue") << "\n"
             << std::endl;
 
-  std::cout << bg::Magenta.Wrap("Magenta") << "    "
-            << fg::Black.Wrap(bg::BrightMagenta.Wrap("Bright Magenta"))
-            << "    " << fg::Magenta.Wrap("Magenta") << "    "
-            << fg::BrightMagenta.Wrap("Bright Magenta") << "\n"
+  std::cout << bg::Magenta("Magenta") << "    "
+            << fg::Black(bg::BrightMagenta("Bright Magenta"))
+            << "    " << fg::Magenta("Magenta") << "    "
+            << fg::BrightMagenta("Bright Magenta") << "\n"
             << std::endl;
 
-  std::cout << bg::Cyan.Wrap("Cyan") << "    "
-            << fg::Black.Wrap(bg::BrightCyan.Wrap("Bright Cyan")) << "    "
-            << fg::Cyan.Wrap("Cyan") << "    "
-            << fg::BrightCyan.Wrap("Bright Cyan") << "\n"
+  std::cout << bg::Cyan("Cyan") << "    "
+            << fg::Black(bg::BrightCyan("Bright Cyan")) << "    "
+            << fg::Cyan("Cyan") << "    "
+            << fg::BrightCyan("Bright Cyan") << "\n"
             << std::endl;
 
-  std::cout << fg::Black.Wrap(bg::White.Wrap("White")) << "    "
-            << fg::Black.Wrap(bg::BrightWhite.Wrap("Bright White")) << "    "
-            << fg::White.Wrap("White") << "    "
-            << fg::BrightWhite.Wrap("Bright White") << "\n\n\n"
+  std::cout << fg::Black(bg::White("White")) << "    "
+            << fg::Black(bg::BrightWhite("Bright White")) << "    "
+            << fg::White("White") << "    "
+            << fg::BrightWhite("Bright White") << "\n\n\n"
             << std::endl;
 }

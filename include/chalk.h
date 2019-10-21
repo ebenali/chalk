@@ -39,7 +39,7 @@ struct Color {
 
   explicit constexpr Color() : rep_(""), terminator_(""), esc_("") {}
 
-  std::string Wrap(std::string_view str) const {
+  std::string operator()(std::string_view str) const {
     std::string result{};
 
     result.reserve(str.size());
@@ -133,7 +133,7 @@ struct FormatOp {
   constexpr inline const char* initiator() const noexcept { return b_; }
   constexpr inline const char* terminator() const noexcept { return e_; }
 
-  std::string Wrap(std::string_view str) const {
+  std::string operator()(std::string_view str) const {
     std::string result;
 
     result.reserve(str.size());
