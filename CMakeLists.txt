@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.11)
+project(chalk VERSION 0.1 LANGUAGES CXX)
+add_library(chalk INTERFACE)
+add_library(chalk::chalk ALIAS chalk)
+target_include_directories(chalk INTERFACE ${CMAKE_CURRENT_LIST_DIR}/include)
+set_target_properties(chalk PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_LIST_DIR}/include/date.h")
+install(TARGETS chalk EXPORT chalkConfig PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/chalk)
+export(TARGETS chalk NAMESPACE chalk:: FILE chalkConfig.cmake)

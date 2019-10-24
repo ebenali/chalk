@@ -3,19 +3,18 @@
 
 # Chalk
 
-Chalk is an expressive modern C++ (17 and above) Terminal text styling API with 3/4 bit color support.
+Chalk is an expressive modern C++ (17 and above) Terminal text styling API with 3/4-bit color support.
 
 ## Features
 
 - Nested styling
 - Nested formatting
-
-TBD
+- CMake integration
 
 ## Installation
 
-It's an header only library, Clone this repo and copy chalk.h into your projects include directory
-
+* Manual: It's an header only library, Clone this repo and copy chalk.h into your projects include directory
+* CMake: ```FetchContent(chalk GIT_REPOSITORY <repo>); FetchContent_MakeAvailable(chalk); target_link_libraries(chalk::chalk)```
 
 ## Examples
 
@@ -55,8 +54,6 @@ TBD
 - bright magenta
 - bright cyan
 - bright white
-
-
 
 
 ## License
