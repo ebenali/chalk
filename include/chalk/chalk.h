@@ -205,6 +205,9 @@ constexpr auto CrossedOut = Format{"\033[9m", "\033[29m"};
 
 static OStreamStyler ostyler{&std::cout};
 
+template<typename F, typename G>
+static constexpr decltype(auto) compose(F &&f, G &&g) { return [=](auto &&x) { return f(g(x)); }; }
+
 };  // namespace chalk
 
 #endif

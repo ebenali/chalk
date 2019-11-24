@@ -51,6 +51,9 @@ int main() {
           << "3/4 bit Colors"
           << "\n\n";
 
+  const auto newsFlash = compose(fmt::SlowBlink, compose(fg::BrightRed, fmt::Bold));
+  std::cout << newsFlash(std::string(35, '>') + " COMPOSED " + std::string(35, '<')) << "\n\n";
+
   std::cout << bg::Red("Red") << "    "
             << fg::Black(bg::BrightRed("Bright Red")) << "    "
             << fg::Red("Red") << "    " << fg::BrightRed("Bright Red")
